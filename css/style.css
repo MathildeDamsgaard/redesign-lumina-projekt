@@ -51,6 +51,7 @@ html {
   display: flex;
   flex-direction: column;
   line-height: 1;
+  text-decoration: none;
 }
 
 #logo1 {
