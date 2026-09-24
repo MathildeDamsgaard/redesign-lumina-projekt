@@ -102,12 +102,11 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 150px;
+  min-height: 100vh;
   text-align: center;
   z-index: 1;
 }
 
-/* Præsenter dette hero section */
 .hovedskrift {
   font-family: var(--overskrift-font);
   font-size: 12rem;
@@ -115,30 +114,21 @@ html {
   color: var(--font-farve);
   line-height: 1;
   position: absolute;
-  top: 50%;
-}
-
-.lum {
-  left: 58%;
-  transform: translate(-130%, -50%);
-  z-index: 1;
-  letter-spacing: 40px;
-}
-.ina {
-  left: 45%;
-  transform: translate(30%, -50%);
-  z-index: 3;
-  letter-spacing: 40px;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  letter-spacing: 48px;
 }
 
 .hero-img {
   width: 500px;
   height: auto;
-  position: relative;
-  top: 50%;
-  left: 15%;
-  transform: translate(-55%, -20%);
-  z-index: 2;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 /* Knap */
