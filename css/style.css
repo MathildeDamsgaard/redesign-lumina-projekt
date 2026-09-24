@@ -42,7 +42,6 @@ body {
 }
 
 /* Navbar */
-/*præsenter dette også*/
 .navbar {
   width: 100%;
   padding: 20px 50px;
@@ -103,6 +102,17 @@ body {
 }
 .cart:hover {
   transform: scale(1.1);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Burger skjules på desktop */
+.mobile-menu {
+  display: none;
 }
 
 /* Hero indhold */
@@ -373,7 +383,7 @@ footer a:hover {
 
   /* Logo */
   #logo1 {
-    font-size: 37, 5px;
+    font-size: 37.5px;
     letter-spacing: 2px;
   }
 
@@ -383,16 +393,68 @@ footer a:hover {
   }
 
   /* Navigation */
+
+  /* Skjul desktop-menu */
   .nav-links {
-    gap: 12px;
+    display: none;
   }
 
   .nav-links a {
     font-size: 11px;
   }
 
+  /* Vis burger */
+  .mobile-menu {
+    display: block;
+    position: relative;
+  }
+
+  .mobile-menu summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 45px;
+    color: var(--font-farve);
+  }
+
+  .mobile-menu summary:hover {
+    transform: scale(1.1);
+  }
+
+  /* Fjerner standard-pilen */
+  .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Menuen der kommer frem */
+  .mobile-links {
+    position: absolute;
+    top: 40px;
+    right: 0;
+
+    list-style: none;
+    background-color: white;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    min-width: 180px;
+  }
+
+  .mobile-links a {
+    font-family: var(--brødtekst-font);
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--font-farve);
+  }
+
+  .nav-right {
+    gap: 15px;
+  }
+
   .cart {
-    width: 18px;
+    width: 38px;
   }
 
   /* Hero overskrift */

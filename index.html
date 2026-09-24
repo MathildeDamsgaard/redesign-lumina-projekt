@@ -15,16 +15,31 @@
           <p id="logo1">LUMINA</p>
           <p id="logo2">AUDIO</p>
         </a>
-        <ul class="nav-links">
-          <li><a href="#produktus">PRODUKT</a></li>
-          <li><a href="#specs">SPECIFIKATIONER</a></li>
-          <li><a href="#app">APP</a></li>
-          <li>
-            <a href="tak.html"
-              ><img src="img/cart.svg" alt="Kurv" class="cart"
-            /></a>
-          </li>
-        </ul>
+
+        <div class="nav-right">
+          <!-- Almindelig desktop navigation -->
+          <ul class="nav-links">
+            <li><a href="#produktus">PRODUKT</a></li>
+            <li><a href="#specs">SPECIFIKATIONER</a></li>
+            <li><a href="#app">APP</a></li>
+          </ul>
+
+          <!-- Burger menu til mobil -->
+          <details class="mobile-menu">
+            <summary aria-label="Åbn menu">☰</summary>
+
+            <ul class="mobile-links">
+              <li><a href="#produktus">PRODUKT</a></li>
+              <li><a href="#specs">SPECIFIKATIONER</a></li>
+              <li><a href="#app">APP</a></li>
+            </ul>
+          </details>
+
+          <!-- Kurv -->
+          <a href="tak.html">
+            <img src="img/cart.svg" alt="Kurv" class="cart" />
+          </a>
+        </div>
       </nav>
     </header>
 
