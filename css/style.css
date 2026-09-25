@@ -23,8 +23,6 @@ body {
 
 :root {
   --farve1: #fef5ef;
-  --farve2: #e1d3c2;
-  --farve3: #f0e4d9;
   --font-farve: #514237;
 
   --logo-font: "Koulen", sans-serif;
@@ -170,6 +168,7 @@ body {
   cursor: pointer;
   transition: 0.3s ease;
   overflow: hidden;
+  text-decoration: none;
 }
 .knap1:hover {
   transform: translateX(-50%) scale(1.05);
@@ -179,145 +178,178 @@ body {
 
 /* Produkt sektion */
 .produkt {
-  background: #ffffff;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  position: relative;
-  overflow: hidden;
+  background: linear-gradient(white, var(--farve3));
+  width: 100%;
+  padding: 100px 5%;
+}
+
+.produkt-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.produktinfo {
+  width: 100%;
 }
 
 .product-title {
   display: flex;
   align-items: baseline;
-  gap: 10px;
+  gap: 15px;
 }
 
 .speclumina {
-  font-size: 50px;
   font-family: var(--logo-font);
-  color: #40382e;
-  letter-spacing: 10px;
+  font-size: 50px;
+  color: var(--font-farve);
+  letter-spacing: 8px;
 }
+
 .specone {
-  font-size: 35px;
   font-family: var(--brødtekst-font);
-  color: #40382e;
+  font-size: 30px;
+  color: var(--font-farve);
   letter-spacing: 10px;
 }
 
 .produktbeskrivelse {
   font-family: var(--brødtekst-font);
-  font-size: 16px;
-  color: #40382e;
-  margin: 20px 0;
-}
-
-/* FARVEVÆLGER MED STREGER */
-.color-selector {
-  border-top: 2px solid #40382e;
-  border-bottom: 2px solid #40382e;
-  padding: 15px 0;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin: 20px 0;
-  width: 100%;
-}
-
-.colors {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.colors li {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-/* Farver */
-.moonlight-white {
-  background-color: #f0e0c7;
-  border: 3px solid #40382e;
-}
-.lavender-mist {
-  background-color: #d3d3ff;
-  border: 1px solid black;
-}
-.dusty-rose {
-  background-color: #dda1a1;
-  border: 1px solid black;
-}
-.sage-green {
-  background-color: #c5d1b9;
-  border: 1px solid black;
-}
-
-.color-name {
   font-size: 18px;
-  font-family: var(--brødtekst-font);
-  color: #40382e;
+  color: var(--font-farve);
+  max-width: 550px;
+  margin-top: 20px;
+  line-height: 1.5;
 }
 
-/* Placering af tekstblok */
-.produktinfo {
-  position: absolute;
-  z-index: 10;
-  width: 400px;
-  left: 5%;
-  top: 130%;
+/* FARVEVÆLGER */
+
+.vaelg-farve {
+  font-family: var(--brødtekst-font);
+  font-size: 18px;
+  color: var(--font-farve);
+  margin-top: 30px;
+  border-bottom: 1px solid var(--font-farve);
+  padding-bottom: 8px;
 }
 
-/* Knap: LÆG I KURV */
-.buy {
+.produktinfo input[type="radio"] {
   position: absolute;
-  bottom: -40%;
-  left: 80%;
-  transform: translateX(-150%);
-  padding: 15px 40px;
-  border: none;
-  border-radius: 40px;
-  background: var(--font-farve);
-  color: white;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.farvevalg {
+  display: flex;
+  gap: 20px;
+  padding: 15px 0 20px;
+  border-bottom: 1px solid var(--font-farve);
+}
+
+.farve {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid var(--font-farve);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-family: var(--brødtekst-font);
-  font-size: 16px;
+  letter-spacing: 5px;
+
   cursor: pointer;
-  transition: 0.3s ease;
-  width: 200px;
-}
-.buy:hover {
-  transform: translateX(-150%) scale(1.05);
+  transition: 0.2s ease;
 }
 
-/* Billeder */
-.trefarver {
-  position: absolute;
-  z-index: 0;
-  width: 550px;
-  left: 55%;
-  top: 135%;
+.farve:hover {
+  transform: scale(1.05);
 }
-.billede {
-  position: absolute;
-  top: 110%;
-  left: 55%;
-  z-index: 10;
-  width: 550px;
+
+.beige {
+  background: #f0e0c7;
+}
+
+.lilla {
+  background: #ccccff;
+}
+
+.rosa {
+  background: #dda1a1;
+}
+
+.groen {
+  background: #c5d1b9;
+}
+
+/* PRODUKTBILLEDER */
+
+.produktbilleder {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.produktbillede {
+  display: none;
+  width: 350px;
+  max-width: 100%;
   height: auto;
 }
+
+#beige:checked ~ .produktbilleder .beige-img {
+  display: block;
+}
+
+#lilla:checked ~ .produktbilleder .lilla-img {
+  display: block;
+}
+
+#rosa:checked ~ .produktbilleder .rosa-img {
+  display: block;
+}
+
+#groen:checked ~ .produktbilleder .groen-img {
+  display: block;
+}
+
+/* PRIS */
+
 .pris {
-  position: absolute;
-  bottom: -15%;
-  left: 5%;
+  position: static;
   font-family: var(--brødtekst-font);
   font-size: 24px;
-  color: #40382e;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: var(--font-farve);
+  margin-top: 20px;
+}
+
+/* LÆG I KURV */
+
+.buy {
+  position: static;
+  transform: none;
+
+  display: block;
+  width: fit-content;
+
+  margin: 30px auto 0;
+  padding: 15px 30px;
+
+  border-radius: 25px;
+  background: var(--font-farve);
+
+  color: white;
+  font-family: var(--brødtekst-font);
+  font-size: 18px;
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.buy:hover {
+  transform: scale(1.05);
 }
 
 /* Andre sektioner */
@@ -491,5 +523,50 @@ footer a:hover {
     padding: 21px 60px;
     font-size: 24px;
     white-space: nowrap;
+  }
+
+  /* PRODUKT */
+
+  .produkt {
+    padding: 60px 20px 100px;
+  }
+
+  .speclumina {
+    font-size: 36px;
+    letter-spacing: 4px;
+  }
+
+  .specone {
+    font-size: 22px;
+    letter-spacing: 7px;
+  }
+
+  .produktbeskrivelse {
+    font-size: 16px;
+  }
+
+  .farvevalg {
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .farve {
+    width: 70px;
+    height: 70px;
+    font-size: 13px;
+    letter-spacing: 3px;
+  }
+
+  .produktbillede {
+    width: 220px;
+  }
+
+  .pris {
+    font-size: 20px;
+  }
+
+  .buy {
+    font-size: 16px;
+    padding: 12px 25px;
   }
 }
