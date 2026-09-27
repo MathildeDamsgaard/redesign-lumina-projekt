@@ -383,14 +383,149 @@ body {
 }
 
 /* Andre sektioner */
+
+/* Specifikationer */
+
 .specs {
-  min-height: 100vh;
-  background: url("../img/futtemus.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
   background-color: var(--farve1);
+  width: 100%;
+  padding: 100px 5% 0;
+  overflow: hidden;
 }
+
+.specs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Overskrift */
+
+.specs-title {
+  font-family: var(--overskrift-font);
+  font-size: 36px;
+  letter-spacing: 12px;
+  color: var(--font-farve);
+  margin-bottom: 60px;
+}
+
+/* Hver række */
+
+.spec-item {
+  border-bottom: 1px solid #c9b8a7;
+}
+
+.spec-item summary {
+  min-height: 100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+  list-style: none;
+
+  font-family: var(--brødtekst-font);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--font-farve);
+}
+
+/* Fjerner browserens standard-pil */
+
+.spec-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.spec-item summary::marker {
+  content: "";
+}
+
+/* Plus / kryds */
+
+.spec-icon {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--font-farve);
+  border-radius: 50%;
+
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Vandret streg */
+
+.spec-icon::before {
+  content: "";
+  position: absolute;
+
+  width: 14px;
+  height: 2px;
+
+  background-color: var(--font-farve);
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Lodret streg */
+
+.spec-icon::after {
+  content: "";
+  position: absolute;
+
+  width: 2px;
+  height: 14px;
+
+  background-color: var(--font-farve);
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Når rækken er åben */
+
+.spec-item[open] .spec-icon::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.spec-item[open] .spec-icon::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Teksten der foldes ud */
+
+.spec-content {
+  padding: 0 60px 35px 0;
+
+  font-family: var(--brødtekst-font);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--font-farve);
+
+  max-width: 900px;
+}
+
+.spec-content p {
+  margin-bottom: 20px;
+}
+
+.spec-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Højtaleren nederst */
+
+.specs-speaker {
+  display: block;
+  width: 450px;
+  max-width: 70%;
+  height: auto;
+
+  margin: 70px auto -80px;
+}
+
 .app {
   min-height: 100vh;
   background: url("../img/diskus.png");
@@ -555,7 +690,7 @@ footer a:hover {
     white-space: nowrap;
   }
 
-  /* PRODUKT */
+  /* Produkt */
 
   .produkt {
     padding: 0px 20px 100px;
@@ -610,5 +745,44 @@ footer a:hover {
 
   .buy {
     margin: 30px auto 0;
+  }
+
+  /* Specifikationer */
+
+  .specs {
+    padding: 60px 20px 0;
+  }
+
+  .specs-title {
+    font-size: 20px;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+  }
+
+  .spec-item summary {
+    min-height: 75px;
+    font-size: 17px;
+  }
+
+  .spec-icon {
+    width: 30px;
+    height: 30px;
+    border-width: 2px;
+  }
+
+  .spec-content {
+    padding: 0 40px 25px 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .spec-content p {
+    margin-bottom: 18px;
+  }
+
+  .specs-speaker {
+    width: 270px;
+    max-width: 80%;
+    margin: 45px auto -40px;
   }
 }
