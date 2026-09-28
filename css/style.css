@@ -987,4 +987,37 @@ footer {
     height: auto;
     display: block;
   }
+
+  footer {
+    padding: 50px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 25px;
+  }
+
+  /* Logoet fylder hele den øverste række */
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-logo {
+    font-size: 32px;
+  }
+
+  .footer-brand p {
+    font-size: 15px;
+    letter-spacing: 8px;
+  }
+
+  .footer-col h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .footer-col p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
 }
