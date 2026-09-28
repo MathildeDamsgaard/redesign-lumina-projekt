@@ -683,6 +683,13 @@ footer {
   margin-top: 3px;
 }
 
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--font-farve);
+  outline-offset: 4px;
+}
+
 /* Responsivt til mobil */
 @media (max-width: 768px) {
   /* Navbar */
