@@ -526,13 +526,107 @@ body {
   margin: 70px auto -80px;
 }
 
+/* App sektion */
+
 .app {
-  min-height: 100vh;
-  background: url("../img/diskus.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 100%;
   background-color: white;
+  padding: 100px 5%;
+  overflow: hidden;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HENT APPEN */
+
+.app-title {
+  font-family: var(--overskrift-font);
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 18px;
+  color: var(--font-farve);
+
+  margin-bottom: 70px;
+}
+
+/* Tekst + telefon */
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+}
+
+/* Mørk boks */
+
+.app-info {
+  background-color: #30271f;
+  color: white;
+
+  padding: 60px 180px 60px 70px;
+
+  border-radius: 80px 0 0 80px;
+}
+
+.app-info h3 {
+  font-family: var(--brødtekst-font);
+  font-size: 38px;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+}
+
+.app-info p {
+  font-family: var(--brødtekst-font);
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 3px;
+  max-width: 600px;
+}
+
+/* App Store knapper */
+
+.app-download {
+  display: flex;
+  gap: 20px;
+  margin-top: 45px;
+  align-items: center;
+}
+
+.app-download a {
+  display: block;
+}
+
+.app-download img {
+  display: block;
+  width: 200px;
+  height: auto;
+  transition: 0.3s ease;
+}
+
+.app-download img:hover {
+  transform: scale(1.05);
+}
+
+/* Telefon */
+
+.app-phone {
+  position: relative;
+  z-index: 2;
+
+  margin-left: -130px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.app-phone img {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Footer */
