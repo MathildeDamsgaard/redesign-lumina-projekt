@@ -879,4 +879,96 @@ footer a:hover {
     max-width: 80%;
     margin: 45px auto -40px;
   }
+
+  /* App */
+
+  .app {
+    padding: 60px 20px 80px;
+    overflow: hidden;
+  }
+
+  .app-container {
+    width: 100%;
+  }
+
+  /* HENT APPEN */
+
+  .app-title {
+    font-size: 24px;
+    letter-spacing: 8px;
+    margin-bottom: 35px;
+    white-space: nowrap;
+  }
+
+  /* Behold to kolonner ligesom på desktop */
+
+  .app-layout {
+    display: grid;
+    grid-template-columns: 68% 32%;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Mørk boks */
+
+  .app-info {
+    width: 100%;
+    min-height: 260px;
+
+    padding: 30px 65px 30px 25px;
+
+    border-radius: 45px 0 0 45px;
+  }
+
+  .app-info h3 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+
+  .app-info p {
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
+
+  /* App Store + Google Play */
+
+  .app-download {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    align-items: center;
+  }
+
+  .app-download a {
+    display: block;
+    flex: 1;
+  }
+
+  .app-download img {
+    width: 100%;
+    max-width: 95px;
+    height: auto;
+  }
+
+  /* Telefonen */
+
+  .app-phone {
+    position: relative;
+    z-index: 2;
+
+    margin-left: -55px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .app-phone img {
+    width: 155px;
+    max-width: none;
+    height: auto;
+    display: block;
+  }
 }
