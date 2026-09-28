@@ -523,7 +523,7 @@ body {
   max-width: 70%;
   height: auto;
 
-  margin: 70px auto -80px;
+  margin: 70px auto 0px;
 }
 
 /* App sektion */
@@ -876,8 +876,8 @@ footer a:hover {
 
   .specs-speaker {
     width: 270px;
-    max-width: 80%;
-    margin: 45px auto -40px;
+    max-width: 75%;
+    margin: 45px auto 30px;
   }
 
   /* App */
