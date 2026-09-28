@@ -559,9 +559,7 @@ body {
 .app-info {
   background-color: #30271f;
   color: white;
-
   padding: 60px 180px 60px 70px;
-
   border-radius: 80px 0 0 80px;
 }
 
@@ -927,8 +925,7 @@ summary:focus-visible {
   .app-info {
     width: 100%;
     min-height: 260px;
-
-    padding: 30px 65px 30px 25px;
+    padding: 10px 65px 30px 25px;
 
     border-radius: 45px 0 0 45px;
   }
