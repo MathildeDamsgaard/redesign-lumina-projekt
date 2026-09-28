@@ -541,12 +541,9 @@ body {
 
 .app-title {
   font-family: var(--overskrift-font);
-  font-size: 42px;
-  font-weight: 700;
-  letter-spacing: 18px;
+  font-size: 36px;
+  letter-spacing: 12px;
   color: var(--font-farve);
-
-  margin-bottom: 70px;
 }
 
 /* Tekst + telefon */
@@ -910,8 +907,8 @@ summary:focus-visible {
   /* Hent appen */
 
   .app-title {
-    font-size: 24px;
-    letter-spacing: 8px;
+    font-size: 20px;
+    letter-spacing: 4px;
     margin-bottom: 35px;
     white-space: nowrap;
   }
