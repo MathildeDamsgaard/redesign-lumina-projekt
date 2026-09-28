@@ -1,5 +1,4 @@
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Koulen&family=Krona+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 
@@ -23,6 +22,7 @@ body {
 
 :root {
   --farve1: #fef5ef;
+  --farve2: #f0e4d9;
   --font-farve: #514237;
 
   --logo-font: "Koulen", sans-serif;
@@ -30,7 +30,7 @@ body {
   --brødtekst-font: "Inria Sans", sans-serif;
 }
 
-/* Hero sektion */
+/* HERO SEKTION */
 .hero {
   background: linear-gradient(rgba(230, 211, 192, 1), white);
   width: 100%;
@@ -174,9 +174,9 @@ body {
   transform: translateX(-50%) scale(1.05);
 }
 
-/* Produkt sektion */
+/* PRODUKT SEKTION */
 .produkt {
-  background: linear-gradient(white, var(--farve3));
+  background: linear-gradient(white, var(--farve2));
   width: 100%;
   padding: 100px 5%;
 }
@@ -219,7 +219,7 @@ body {
   line-height: 1.5;
 }
 
-/* FARVEVÆLGER */
+/* Farvevælger */
 
 .vaelg-farve {
   font-family: var(--brødtekst-font);
@@ -288,13 +288,7 @@ body {
   background: #c5d1b9;
 }
 
-/* PRODUKTBILLEDER */
-
-.produktbilleder {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
+/* Produktbilleder */
 
 .produktbillede {
   display: none;
@@ -319,7 +313,7 @@ body {
   display: block;
 }
 
-/* PRIS */
+/* Pris */
 
 .pris {
   position: static;
@@ -331,9 +325,12 @@ body {
   margin-top: 20px;
 }
 
-/* LÆG I KURV */
+/* Læg i kurv */
 
 .buy {
+  grid-column: 2;
+  justify-self: center;
+
   position: static;
   transform: none;
 
@@ -384,18 +381,10 @@ body {
   margin: 0;
 }
 
-.buy {
-  grid-column: 2;
-  justify-self: center;
-  margin-top: 30px;
-}
-
-/* Andre sektioner */
-
-/* Specifikationer */
+/* SPECIFIKATIONER SEKTION */
 
 .specs {
-  background-color: var(--farve1);
+  background: linear-gradient(var(--farve2), white);
   width: 100%;
   padding: 100px 5% 0;
   overflow: hidden;
@@ -534,7 +523,7 @@ body {
   margin: 70px auto 0px;
 }
 
-/* App sektion */
+/* APP SEKTION */
 
 .app {
   width: 100%;
@@ -548,7 +537,7 @@ body {
   margin: 0 auto;
 }
 
-/* HENT APPEN */
+/* Hent appen */
 
 .app-title {
   font-family: var(--overskrift-font);
@@ -637,7 +626,7 @@ body {
   display: block;
 }
 
-/* Footer */
+/* FOOTER */
 
 footer {
   background-color: #e7d2bd;
@@ -722,10 +711,6 @@ footer {
   /* Skjul desktop-menu */
   .nav-links {
     display: none;
-  }
-
-  .nav-links a {
-    font-size: 11px;
   }
 
   /* Vis burger */
@@ -915,7 +900,7 @@ footer {
     width: 100%;
   }
 
-  /* HENT APPEN */
+  /* Hent appen */
 
   .app-title {
     font-size: 24px;
