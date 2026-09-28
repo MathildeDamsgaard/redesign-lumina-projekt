@@ -243,6 +243,14 @@ body {
   border-bottom: 1px solid var(--font-farve);
 }
 
+.produkt-indhold:has(#beige:focus-visible) .beige,
+.produkt-indhold:has(#lilla:focus-visible) .lilla,
+.produkt-indhold:has(#rosa:focus-visible) .rosa,
+.produkt-indhold:has(#groen:focus-visible) .groen {
+  outline: 3px solid var(--font-farve);
+  outline-offset: 4px;
+}
+
 .farve {
   width: 100px;
   height: 100px;
