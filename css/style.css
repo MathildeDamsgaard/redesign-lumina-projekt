@@ -630,44 +630,60 @@ body {
 }
 
 /* Footer */
+
 footer {
   background-color: #e7d2bd;
-  padding: 40px 60px;
-  min-height: 30vh;
-  color: black;
+  padding: 60px 5%;
+  color: var(--font-farve);
   font-family: var(--brødtekst-font);
 }
-footer table {
+
+.footer-container {
   width: 100%;
-  border-collapse: collapse;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
 }
-footer .col {
-  vertical-align: top;
-  padding-right: 40px;
-}
-footer h2.logo {
-  font-size: 24px;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
-}
-footer h3 {
+
+.footer-col h3 {
   font-size: 14px;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
 }
-footer p {
-  font-size: 13px;
+
+.footer-col p {
+  font-size: 14px;
   line-height: 1.8;
 }
-footer a {
-  color: black;
+
+.footer-col a {
+  color: var(--font-farve);
   text-decoration: none;
 }
-footer a:hover {
+
+.footer-col a:hover {
   text-decoration: underline;
 }
-.mail {
-  color: rgb(47, 39, 152);
+
+/* Logo */
+
+.footer-logo {
+  font-family: var(--logo-font);
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+.footer-brand p {
+  font-size: 17px;
+  letter-spacing: 10px;
+  line-height: 1;
+  margin-top: 3px;
 }
 
 /* Responsivt til mobil */
